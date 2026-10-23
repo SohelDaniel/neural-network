@@ -1,0 +1,20 @@
+# build output
+build/
+cmake-build-*/
+nn
+matrix_test
+gradient_check
+*.o
+*.a
+
+# MNIST dataset (download with scripts/download_mnist.sh)
+data/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+compile_commands.json
+.cache/
