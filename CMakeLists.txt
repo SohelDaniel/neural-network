@@ -25,3 +25,6 @@ add_library(nn_core
 	src/mnist.cpp
 )
 target_include_directories(nn_core PUBLIC src)
+
+add_executable(nn src/main.cpp)
+target_link_libraries(nn PRIVATE nn_core)
