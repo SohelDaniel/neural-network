@@ -22,5 +22,6 @@ add_library(nn_core
 	src/matrix.cpp
 	src/layer.cpp
 	src/network.cpp
+	src/mnist.cpp
 )
 target_include_directories(nn_core PUBLIC src)
