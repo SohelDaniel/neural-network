@@ -16,3 +16,9 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
 	add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
+
+# core library shared by the trainer and the tests
+add_library(nn_core
+	src/matrix.cpp
+)
+target_include_directories(nn_core PUBLIC src)
