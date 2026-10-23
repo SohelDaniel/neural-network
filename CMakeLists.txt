@@ -28,3 +28,10 @@ target_include_directories(nn_core PUBLIC src)
 
 add_executable(nn src/main.cpp)
 target_link_libraries(nn PRIVATE nn_core)
+
+enable_testing()
+foreach(test matrix_test gradient_check)
+	add_executable(${test} tests/${test}.cpp)
+	target_link_libraries(${test} PRIVATE nn_core)
+	add_test(NAME ${test} COMMAND ${test})
+endforeach()
