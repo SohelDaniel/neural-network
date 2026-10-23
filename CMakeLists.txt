@@ -20,5 +20,6 @@ endif()
 # core library shared by the trainer and the tests
 add_library(nn_core
 	src/matrix.cpp
+	src/layer.cpp
 )
 target_include_directories(nn_core PUBLIC src)
